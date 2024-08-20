@@ -84,6 +84,10 @@ export default ((userOpts?: Partial<Options>) => {
       constructFileTree(allFiles)
     }
 
+    if (fileTree.children.length <= 1) {
+      return null;
+    }
+
     return (
       <div class={classNames(displayClass, "explorer")}>
         <button
