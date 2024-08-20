@@ -1,0 +1,12 @@
+@use "./base.scss";
+
+.toc { 
+    padding: .5rem;
+    background-color: var(--highlight);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    button {
+        width: 100%;
+    }
+}
