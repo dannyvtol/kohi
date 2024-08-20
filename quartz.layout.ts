@@ -31,9 +31,8 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.DesktopOnly(
       Component.Explorer({
-        useSavedState: false,
         sortFn: (fileNodeA: FileNode, fileNodeB: FileNode) => {
-          if (fileNodeA.file && fileNodeB.file) {
+          if (fileNodeA.file !== null && fileNodeB.file !== null) {
             const frontmatterWeightA: number = (fileNodeA.file.frontmatter?.weight ?? 999) as number;
             const frontmatterWeightB = (fileNodeB.file.frontmatter?.weight ?? 999) as number;
           
