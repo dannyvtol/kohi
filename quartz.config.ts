@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { QuartzPluginData } from "./quartz/plugins/vfile";
 
 /**
  * Quartz 4.0 Configuration
@@ -77,7 +78,18 @@ const config: QuartzConfig = {
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
-      Plugin.FolderPage(),
+      Plugin.FolderPage({
+        sort: (pluginDataA: QuartzPluginData, pluginDataB: QuartzPluginData) => {
+          const frontmatterWeightA: number = (pluginDataA.frontmatter?.weight ?? 999) as number;
+          const frontmatterWeightB = (pluginDataB.frontmatter?.weight ?? 999) as number;
+          
+          if (frontmatterWeightA < frontmatterWeightB) {
+            return -1;
+          }
+        
+          return 1
+        }
+      }),
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,

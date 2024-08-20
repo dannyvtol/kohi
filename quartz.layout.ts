@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileNode } from "./quartz/components/ExplorerNode";
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -28,7 +29,28 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TableOfContents(),
   ],
   left: [
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.Explorer({
+        useSavedState: false,
+        sortFn: (fileNodeA: FileNode, fileNodeB: FileNode) => {
+          if (fileNodeA.file && fileNodeB.file) {
+            const frontmatterWeightA: number = (fileNodeA.file.frontmatter?.weight ?? 999) as number;
+            const frontmatterWeightB = (fileNodeB.file.frontmatter?.weight ?? 999) as number;
+          
+            if (frontmatterWeightA < frontmatterWeightB) {
+              return -1;
+            }
+          
+            return 1;
+          }
+
+          return fileNodeA.displayName.localeCompare(fileNodeB.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          });
+        }
+      })
+    ),
   ],
   right: [
     Component.Graph(),
