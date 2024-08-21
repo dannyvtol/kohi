@@ -11,4 +11,4 @@ Wil jij de Japanse cultuur leren kennen, of misschien wel kunnen lezen en schrij
 Aan het eind van de dag dienen notities als naslagwerk. Dus kijk voor extra verdieping bij het [[studiemateriaal]]
 
 ## Cultuur
-- []
+- [[01-cultuur/geschriften|Geschriften]]
