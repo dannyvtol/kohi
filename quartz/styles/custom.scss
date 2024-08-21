@@ -10,3 +10,15 @@
         width: 100%;
     }
 }
+
+html[saved-theme="dark"] {
+    .light-mode-render {
+        display: none;
+    }
+}
+
+html[saved-theme="light"] {
+    .dark-mode-render {
+        display: none;
+    }
+}
