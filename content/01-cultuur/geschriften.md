@@ -34,5 +34,5 @@ Kanji is gebasseerd op de Chineese symbolen. In verband met bijvoorbeeld handel 
 > maar dat samengestelde worden de Chineese uitspraak krijgt
 >
 > 人 / hito betekend persoon.
-> Om een nationaliteit aan te duiden wordt een samengesteld wordt gebruikt bestaande uit het land + 人.
+> Om een nationaliteit aan te duiden wordt een samengesteld woord gebruikt bestaande uit het land + 人.
 > Nederlands is dan オランダ人 / Oranda (オランダ) jin (人)
