@@ -12,13 +12,24 @@
 }
 
 html[saved-theme="dark"] {
-    .light-mode-render {
-        display: none;
+    .image-background {
+        background-color: #fff;
+        border-radius: 5px;
+
+        figcaption {
+            color: #4e4e4e;
+        }
     }
 }
 
-html[saved-theme="light"] {
-    .dark-mode-render {
-        display: none;
-    }
+figure {
+    margin: 0;
+}
+figure > img {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    padding-bottom: 1rem;
 }

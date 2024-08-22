@@ -5,15 +5,11 @@ enableToc: false
 enableContentMeta: false
 enableBacklinks: false
 enableGraph: false
-hideTitle: true
+hideTitle: true 
 ---
 
-<div class="light-mode-render">
-    ![[/assets/images/entertainer-black.png|Entertainer (Light Mode)]]
-</div>
-
-<div class="dark-mode-render">
-    ![[/assets/images/entertainer-white.png|Entertainer (Dark Mode)]]
+<div class="image-background">
+    ![[/assets/images/entertainer.png|Entertainer]]
 </div>
 
 # コーヒー (Koffie in het Japans)
